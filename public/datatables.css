@@ -1,0 +1,48 @@
+table.dataTable{
+  border-radius: 10px !important;
+  background: #feed01;
+}
+table.dataTable thead th {
+  font-size: 1.4em;
+}
+table.dataTable tbody td{
+  padding: 8px 23px !important;
+}
+table.dataTable a:hover{
+  color: #9d9ea0;
+}
+.paginate_button{
+  border-radius: 10px !important;
+  transition: 120ms ;
+  border: none !important;
+}
+.paginate_button.current{
+  background: #feed01 !important;
+  border: none !important;
+}
+
+.paginate_button:hover,
+.paginate_button.current:hover
+{
+  background: #9d9ea0 !important;
+  border: none !important;
+}
+
+.paginate_button:active{
+  box-shadow: none !important;
+  border-radius: 15px !important;
+
+}
+#table_article .fa, #table_course .fa, #table_chapter_wrapper .fa, #table_profile .fa{
+  background: linear-gradient(45deg, rgba(171,171,171,1) 0%, rgba(171,171,171,1) 32%, rgba(82,79,40,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: .95em;
+}
+#table_article .fa:hover, #table_course .fa:hover, #table_chapter_wrapper .fa:hover, #table_profile .fa:hover{
+  background: linear-gradient(45deg, rgba(241,231,103,1) 0%, rgba(254,182,69,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: .95em;
+  text-shadow: 0 0 9px rgba(115, 114, 114, 0.2);
+}

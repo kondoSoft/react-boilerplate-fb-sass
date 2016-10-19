@@ -1,16 +1,193 @@
+//Var
+$small: 450px
+$smallWidth : 'max-width: #{$small}'
+
+//Generales
+
+.container
+  @media screen and ($smallWidth)
+    width: 100%
+
+
+a
+  text-decoration: none
+  color:#000
+.button.yellow
+  color:#000
+  background: #FEEF29
+
+.button.red
+  color:#fff
+  background: #f44336
+
+.admin
+  text-align: center
+  width: 100%
+  position: fixed
+  bottom: 0
+
+//Generales
+
 .App
   display: flex
   flex-flow: column
   min-height: 100vh
 
-.Header
-  max-height: 200px
+  .Header
+    max-height: 56px
+    height: 56px
+
+
+nav
+  width: 100%
+  box-shadow: 0px 1px 1px 0px #999
+
+  img
+    margin-left:  20px
+    display: inline-block
+    float: left
+    padding-top: 10px
+
+  ul
+    list-style: none
+    margin-bottom: 0
+    display: inline-block
+    position: relative
+    left: 6rem
+
+    li
+      display: inline-block
+      padding: 16px
+      margin-bottom: 0
+
+      a
+        color: #000
+        font-size: 1.3rem
+
+      a:hover
+        color: #000
+
+    li.icon
+      display: none
+
+    li:hover
+      box-shadow: 0px 6px #FEEF29
+
+
+
+
+
+//MAIN
+#header-title
+  text-align: center
+
+.main-course
+  padding: 0 0 4% 0
+
+.row-course
+  display: flex
+  text-align: center
+  justify-content: flex-start
+  flex-wrap: wrap
+
+.courses
+  width: 40%
+  height: 260px
+  background: #d1d1d3
+  margin: 1% 1%
+  position: relative
+  &:first-child
+    margin-left: 1%
+  @media screen and ($smallWidth)
+    width: 100%
+    margin: 1em 0
+    &:first-child
+      margin-left: 0
+
+
+
+.courses a
+  display: block
+  position: absolute
+  height: 100%
+  width: 100%
+  overflow: hidden
+  color: #000
+
+.row-course .courses div
+  display: flex
+  justify-content: center
+  padding: 1% 0
+
+
+.row-course .courses h6,.row-course .courses p
+  display: flex
+  justify-content: center
+  margin: 1em .3em
+
+.course-logo
+  width: 100px
+  height: 100px
 
 .Main
   flex: 1
-  background: gold
-
+//FOOTER
 .Footer
-  height: 200px
+  height: 100%
   background: lightgreen
-  min-height: 60px
+
+/*Footer*/
+#footer-gray
+  background: #646464
+  color: white
+
+  a
+    color: #fff
+
+  .columns-footer
+    padding: 35px 0 0 30px
+
+
+  #input-email
+    color: #000
+
+
+  .footer-legal
+    background: #FEED00
+    color: #000
+    clear: both
+
+    img
+      margin: 15px 0 0 30px
+
+    span
+      margin: 10px 10px 0 20px
+      display: inline-block
+
+  .social-media i
+    margin: 5px 5px 20px 0
+    color: #646464
+
+  .social-media .fa-map-marker
+    color: #fff
+
+  .circulo
+       width: 1.3em
+       height: 1.3em
+       -moz-border-radius: 50%
+       -webkit-border-radius: 50%
+       border-radius: 50%
+       background: #fff
+       text-align: center
+       line-height: 1.3em !important
+
+  .language
+    margin-bottom: 15px
+
+  footer p
+    font-size: 1.3rem
+
+  .footer-p
+    font-size: 1.7rem
+    font-weight: 800
+    margin-bottom: 2px
