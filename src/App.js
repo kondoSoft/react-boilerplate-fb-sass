@@ -35,12 +35,19 @@ class App extends Component {
 
       },
       teachers:{}
-
     }
-  }
-  renderCourse(courseKey){
 
-    return <Course key={courseKey} index={courseKey} course={this.props.courses[courseKey]}/>
+    this.renderCourse = this.renderCourse.bind(this);
+  }
+  renderCourse(key){
+    console.log(key);
+    var data = {
+      title:this.state.courses[key].title,
+      desc:this.state.courses[key].desc,
+      img:this.state.courses[key].img
+    }
+    console.log(data);
+    return <Course key={key} data={data} />
   }
   render() {
     return (
@@ -53,6 +60,39 @@ class App extends Component {
   }
 }
 
+class Main extends Component{
+
+  render(){
+    return(
+      <main className="container main-course Main">
+      <div id="header-title">
+      <h2>CURSOS</h2>
+      </div>
+      <section className="row row-course">
+      {Object.keys(this.props.courses).map(this.props.renderCourse)}
+      </section>
+      </main>
+    )
+  }
+}
+
+class Course extends Component{
+  render(){
+    var data = this.props.data
+    console.log(this.propos)
+    return(
+      <div className="one-third column courses">
+      <a href="/courses/:id">
+      <img className="course-logo" src={data.img} alt={data.title}/>
+      <h6>{data.title}</h6>
+      <p>
+      {data.desc}
+      </p>
+      </a>
+      </div>
+    )
+  }
+}
 
 class NavBar extends Component{
   render(){
@@ -71,21 +111,6 @@ class NavBar extends Component{
   }
 }
 
-class Main extends Component{
-  render(){
-    console.log(this.props);
-    return(
-      <main className="container main-course Main">
-        <div id="header-title">
-          <h2>CURSOS</h2>
-        </div>
-        <section className="row row-course">
-          {Object.keys(this.props.courses).map(this.props.renderCourse.bind(this))}
-        </section>
-      </main>
-    )
-  }
-}
 
 class Footer extends Component{
   render(){
@@ -130,22 +155,6 @@ class Footer extends Component{
           <span>Copyright (c) 2016 Copyright Holder All Rights Reserved.</span>
         </div>
       </footer>
-    )
-  }
-}
-class Course extends Component{
-  render(){
-    var courseKey = this.props.index
-    return(
-      <div className="one-third column courses">
-        <a href="/courses/:id">
-          <img className="course-logo"src="" alt="Logo del curso"/>
-          <h6>{this.state.courses[courseKey].title}</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </a>
-      </div>
     )
   }
 }
