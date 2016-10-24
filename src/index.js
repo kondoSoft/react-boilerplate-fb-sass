@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
 import './index.css';
+require('./style.sass')
+import App from './App';
+import Admin from './Admin'
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+import {Router, Route, Link, browserHistory} from 'react-router'
+
+
+ReactDOM.render((
+  <Router history={browserHistory}>
+    <Route path='/' component={App}></Route>
+    <Route path='/admin' component={Admin}></Route>
+  </Router>
+), document.getElementById('root'))
