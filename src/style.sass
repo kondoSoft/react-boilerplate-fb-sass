@@ -1,7 +1,8 @@
 //Var
 $small: 450px
 $smallWidth : 'max-width: #{$small}'
-
+$borderColor : #999
+$yellow: #FEEF29
 //Generales
 
 .container
@@ -191,3 +192,42 @@ nav
     font-size: 1.7rem
     font-weight: 800
     margin-bottom: 2px
+
+
+.btn
+  padding: .3em
+  background: $yellow
+  &:hover
+    background: #646464
+    color: #FFF
+
+.input-group
+
+  input
+    padding: .3em
+    border: 1px solid $borderColor
+
+  span
+    border: 1px solid $borderColor
+    padding: .3em
+    margin-bottom: 1.5
+    border-right: 0
+    background: #CCC
+
+.textarea-group
+  vertical-align: top
+
+  textarea
+      padding: .3em
+      border: 1px solid $borderColor
+      border-radius: 0
+      display: inline-block
+
+  span
+    border: 1px solid $borderColor
+    display: inline-block
+    padding: .3em
+    margin-bottom: 1.5
+    border-right: 0
+    background: #CCC
+    vertical-align: top

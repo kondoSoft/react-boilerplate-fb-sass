@@ -3,6 +3,8 @@ import './App.css';
 import React, {Component} from 'react'
 import Nav from './Nav'
 import Footer from './Footer'
+import AdminMenu from './AdminMenu'
+
 class Admin extends Component{
   constructor(props){
     super(props)
@@ -12,6 +14,7 @@ class Admin extends Component{
       return (
         <div className='App'>
           <Nav/>
+          <AdminMenu/>
           <main className="container main-course Main">
             <h1>admin</h1>
           </main>
