@@ -7,7 +7,7 @@ class Input extends Component{
       return (
         <div className="textarea-group">
           <span className="input-group-addon"><i className={'fa ' +this.props.icon+ ' fa-fw'}></i></span>
-          <textarea placeholder={this.props.placeholder}/>
+          <textarea ref={this.props.refs} placeholder={this.props.placeholder}/>
         </div>
       )
     }
@@ -15,7 +15,7 @@ class Input extends Component{
     return (
       <div className="input-group">
         <span className="input-group-addon"><i className={'fa ' +this.props.icon+ ' fa-fw'}></i></span>
-        <input placeholder={this.props.placeholder}/>
+        <input ref={this.props.refs} placeholder={this.props.placeholder}/>
       </div>
     )
   }

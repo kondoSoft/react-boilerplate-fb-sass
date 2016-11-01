@@ -6,7 +6,7 @@ import App from './App';
 import Admin from './Admin'
 import NewCourse from './NewCourse'
 
-import {Router, Route, Link, browserHistory} from 'react-router'
+import {Router, Route, browserHistory} from 'react-router'
 
 
 ReactDOM.render((
